@@ -8,7 +8,7 @@ else:
     print("Valid input.")
     print("Var 1:", var1)
 
-# Example of type validation in Python
+# Example of type validation in Python.
 try:
     var2 = int(input("Please enter a value: ")) # Input expecting an integer.
     print("Var 2:", var2)
