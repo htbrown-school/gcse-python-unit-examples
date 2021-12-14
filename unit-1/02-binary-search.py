@@ -12,12 +12,12 @@ def binarySearch(arr, searchTerm, start, end):
     elif searchTerm < arr[mid]:
         return binarySearch(arr, searchTerm, start, mid - 1)
     else:
-        return binarySearch(arr, searchTerm, mid - 1, end)
+        return binarySearch(arr, searchTerm, mid + 1, end)
 
 arr = [1, 2, 3, 6, 9, 11, 14, 18, 27]
 searchTerm = int(input("Enter the value to search for: "))
 
-result = binarySearch(arr, searchTerm, 0, len(arr) - 1)
+result = binarySearch(arr, searchTerm, 0, len(arr))
 if not result:
     print("Search term not found.")
 else:
