@@ -2,36 +2,39 @@
 # Below is an example of a merge sort. Works well for larger arrays/lists and is considered fairly efficient.
 # Using subroutines - see Unit 2: Example 01.
 
-def bubble(arr):
-    done = False
-    while not done: # First loop - continues until all have completed.
-        done = True
-        for i in range(0, len(arr) - 1): # Second loop - goes through the array/list.
-            if arr[i] > arr[i + 1]: # Is the current item larger than the next in the array/list.
-                temp = arr[i] # Store current item in temporary variable.
-                arr[i] = arr[i + 1] # Set current item to next item.
-                arr[i + 1] = temp # Set next item to temporary variable.
-                done = False # Not finished sort.
-        print(str(arr)) # Print array/list.
+def mergeSort(arr): # Main function
+    if len(arr) > 1: # Check the array/list to begin - if the length is 1 then it doesn't need to split
+        mid = len(arr) // 2  # Find the midpoint
+        left = arr[:mid] # Define the left side
+        right = arr[mid:] # Define the right side
 
-def split(arr):
-    mid = (len(arr - 1)) // 2
-    left = arr[0:mid]
-    right = arr[mid + 1:len(arr)]
+        mergeSort(left) # Sort the left side (iteration with functions)
+        mergeSort(right) # Sort the right side (iteration with functions)
 
-    return [left, right]
+        i = 0 # Iteration initialisation
+        j = 0
+        k = 0
 
-def join(arr):
-    final = []
-    for i in len(arr) - 1:
-        final = final + arr[i]
-    return final
+        while i < len(left) and j < len(right): # While statement to sort both arrays/lists together.
+            if left[i] < right[j]: # Sorting
+                arr[k] = left[i]
+                i = i + 1
+            else:
+                arr[k] = right[j]
+                j = j + 1
+            k = k + 1
+            print(arr)
+        while i < len(left): # While statement to sort single array/list.
+            arr[k] = left[i]
+            i = i + 1
+            k = k + 1
+        while j < len(right):
+            arr[k] = right[j]
+            j = j + 1
+            k = k + 1
 
-arr = [12, 9, 13, 10, 2, 4, 8, 17, 13, 28, 1, 23, 7] # Sample array/list.
-arrs = []
+    return arr
 
-while len(arr) > 1:
-    arrs.append(bubble(split(arr)))
-
-final = join(arrs)
-print(str(final))
+arr = [12, 15, 32, 12, 5, 2, 4, 3, 9, 14]
+sortedArr = mergeSort(arr)
+print("Final array/list:", str(sortedArr))
