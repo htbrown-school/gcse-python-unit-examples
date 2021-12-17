@@ -1,4 +1,4 @@
-# Trace Tables - Unit 2
+# Trace Tables - Unit 2b
 # Use a trace table to work out the purpose of this algorithm.
 
 amount = int(input("Enter amount: "))

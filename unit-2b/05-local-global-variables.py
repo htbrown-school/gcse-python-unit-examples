@@ -1,4 +1,4 @@
-# Local and Global Variables - Unit 2
+# Local and Global Variables - Unit 2b
 
 var1 = "This is a global variable." # Defining a global variable is simple - it just has to be outside of any subroutines in Python.
 

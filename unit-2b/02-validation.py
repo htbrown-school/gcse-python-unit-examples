@@ -1,4 +1,4 @@
-# Validation - Unit 2
+# Validation - Unit 2b
 
 # Example of simple range validation.
 var1 = int(input("Please enter a value: ")) # Input expecting an integer between 1 and 10.

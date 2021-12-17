@@ -1,4 +1,4 @@
-# Authentication - Unit 2
+# Authentication - Unit 2b
 
 # Example of simple (insecure) authentication selection.
 user1 = input("Enter your username: ")

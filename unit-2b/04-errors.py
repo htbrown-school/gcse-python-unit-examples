@@ -1,4 +1,4 @@
-# Errors - Unit 2
+# Errors - Unit 2b
 
 # This file contains three errors. It is meant to output even numbers multiplied together.
 # You can use breakpoints and debugging in your IDE or a trace table to determine the logic errors.
